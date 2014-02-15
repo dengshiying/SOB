@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/home/home.css" rel="stylesheet" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/login.js"></script>
+        <script src="scripts/app.js"></script>
+    </head>
+    <body>
+        <div id="homeView" data-role="view" data-layout="layoutMain">
+            <header data-role="footer" >
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                    <a data-role="button" onclick="goback()" data-align="left" style="line-height:3em;height:3em;padding:0em 0 0 0;border: 0px solid;border-radius:6px" >
+                        <img type="image" style="width:3em" src="./styles/home/images/defaultUser_icon.png"  />
+                    </a>
+                    <a data-align="right"  data-role="button" style="line-height:3em;height:3em;padding:0em 0 0 0;border: 0px solid;border-radius:6px" onclick="selectCtr('#foundAlbum')">
+                        <img type="image" style="width:3em" src="./styles/home/images/bubble_index.png"  />
+                    </a>
+                    <a data-align="right"  data-role="button" style="line-height:3em;height:3em;padding:0em 0 0 0;border: 0px solid;border-radius:6px" onclick="selectCtr('#foundAlbum')">
+                        <img type="image" style="width:3em" src="./styles/home/images/setting_index.png"  />
+                    </a>
+                    <a data-align="right"  data-role="button" style="line-height:3em;height:3em;padding:0em 0 0 0;border: 0px solid;border-radius:6px" onclick="selectCtr('#foundAlbum')">
+                        <img type="image" style="width:3em" src="./styles/home/images/search_index.png"  />
+                    </a>
+                </div>
+            </header>
+            <div data-role="content" style="background:url(styles/home/images/main_bg.png); background-size: 100% 100%;background-repeat: no-repeat;">
+
+            </div>
+        </div>
+        <!--尾部-->
+        <div data-role="layout" data-id="layoutMain" style="background: transparent;" data-platform="android" >
+            <div data-role="header" id="growFooter" >
+                <div id="growtabstrip" data-role="tabstrip" >
+                        <a data-icon="home" >首页 </a>
+                        <a data-icon="jianch-e" >检查录入 </a>
+                        <a data-icon="tongjiqy-e" >企业统计 </a>
+                        <a data-icon="arrow-e" >最新资讯</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

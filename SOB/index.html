@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="styles/home/home.css" rel="stylesheet" />
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="scripts/login.js"></script>
-    <script src="scripts/app.js"></script>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/home/home.css" rel="stylesheet" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/login.js"></script>
+        <script src="scripts/app.js"></script>
 
-</head>
-<body>
-    <!--登录页面-->
-    <div id="loginView" data-role="view" data-title="">
-        <div class="left-btn1" style="width:100%;margin:0.5em 0 0 0;padding:0 0 0 0;vertical-align:middle;"  >
-                <input type="image" style="width:2.5em;float:right;margin-right:0.5em;vertical-align:middle;" src="./styles/home/images/exit.png" onclick="picCtlSelsctInit()" />
+    </head>
+    <body>
+        <!--登录页面-->
+        <div id="loginView" data-role="view" data-title="">
+            <div class="left-btn1" style="width:100%;margin:0.5em 0 0 0;padding:0 0 0 0;vertical-align:middle;"  >
+                <input type="image" style="width:2.5em;float:right;margin-right:0.5em;vertical-align:middle;" src="./styles/home/images/exit.png" onclick="exit()" />
             </div>
-        <div data-role="content" style="background:url(styles/home/images/bg_login.png); background-size: 100% 100%;background-repeat: no-repeat;text-elign:center;vertical-align:middle;">
-                <img src="" id="text" style="display: block;align:center;vertical-align:middle;" />
-                <input type="hidden" id="deletePhotoId" />
-        </div>
-    </div>
-
-    <!--Login-->
-    <div id="tabstrip-login"
-        data-role="view"
-        data-title="Login"
-        data-model="app.loginService.viewModel">
-
-        <div class="view-content">
-            <div class="logo"></div>
-            <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
-            <h1 class="welcome" data-bind="visible: isLoggedIn">Welcome, <span data-bind="text: username"></span>!
-            </h1>
-            <div class="buttonArea">
-                <input type="submit" id="logout" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" class="login-button" value="Logout" />
-            </div>
-
-            <form data-bind="events: { keyup: checkEnter }">
-                <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
-                    <li>
-                        <label>
-                            Username
-                                <input type="text" data-bind="value: username" />
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            Password
-                                <input type="password" data-bind="value: password" />
-                        </label>
-                    </li>
-                </ul>
-
-                <div class="buttonArea">
-                    <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="login-button" value="Login" />
+            <div data-role="content" style="background:url(styles/home/images/bg_login.png); background-size: 100% 100%;background-repeat: no-repeat;text-elign:center;vertical-align:middle;">
+                <div style="text-align:center;margin-top:5em">
+                    <img src="styles/home/images/sob_title.png" id="text" style="margin-left:0.5em;width:80%;align:center;vertical-align:middle;" />
                 </div>
-            </form>
+                <br/>
+                <div style=" border:0px solid;padding:0.5em 0.5em 0.5em 0.5em;background-color:#FFFFFF;width:90%;margin:0 auto">
+                    <ul>
+                        <li>
+                            <label>
+                                <img src="styles/home/images/user.png" id="text" style="width:15%;align:center;vertical-align:middle;" />
+                                <input type="text" id="userName" style="color:black;border-bottom:0px;background-image: none;"  />
+                                <hr />
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <img src="styles/home/images/key.png" id="text" style="width:15%;align:center;vertical-align:middle;" />
+                                <input type="password" id="passWord" style="color:black;border-bottom:0px;background-image: none;"  />
+                                <hr />
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div style="width:100%;text-align:left;vertical-align:middle;padding:1em 0 1em 0" >
+                                    <div style="display:inline;line-height:2.2em" >
+                                        保存密码
+                                    </div>
+                                    <div style="display:inline;float:right;">
+                                        <input style="align:right;background-color:#FFFFFF;"  data-role="switch"   checked="checked" />
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div id="btn_login" onclick="login()" onMouseOver="loginonMouseOver()" onMouseOut="loginonMouseOut()"  style="text-align:center;line-height:2.5em;height:2.5em;width:100%;background:url(styles/home/images/loginbtn.png);background-size: 100% 100%;background-repeat: no-repeat;margin:0 auto">
+                    <font color="#FFFFFF">登录</font>
+                </div>
+            </div>
         </div>
-
-    </div>
-</body>
+    </body>
 </html>
