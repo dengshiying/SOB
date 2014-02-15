@@ -1,0 +1,16 @@
+.km-root .left-btn1
+{
+    position: absolute;
+    z-index: 9999;
+    top: 0em;
+    left: 0em;
+    padding-right: 0;
+    padding-left: 0;
+    line-height: 2.5em;
+    border-radius: 0em;
+    -webkit-border-radius: 0em;
+    border: 0px solid rgba(255, 255, 255, .8);
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0em 0;
+    -webkit-box-shadow: 0 0 .0em 0;
+}
