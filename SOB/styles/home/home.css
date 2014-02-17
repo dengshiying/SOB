@@ -107,11 +107,9 @@ body, a, ul, li
     -webkit-border-radius: 0;
     border-style: solid;
     border-color: transparent;
-    border-width: 0;
-    background-clip: padding-box;
     min-width: 5em;
 }
-.km-tabstrip .km-state-active
+.km-android .km-tabstrip .km-button:active, .km-android .km-tabstrip .km-state-active
 {
     color: #FFF;
     border-bottom-width: 0em;
@@ -120,6 +118,7 @@ body, a, ul, li
     -webkit-box-shadow: none;
     border-color: transparent;
 }
+
 .km-android .km-tabstrip .km-button:active, .km-android .km-tabstrip .km-state-active
 {
     color: rgb(255, 148, 0);
