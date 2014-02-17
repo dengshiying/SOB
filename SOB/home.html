@@ -9,8 +9,8 @@
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
-        <script src="scripts/login.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="scripts/login.js"></script>
     </head>
     <body>
         <div id="homeView" data-role="view" data-layout="layoutMain">
@@ -32,19 +32,41 @@
                 </div>
             </header>
             <div data-role="content" style="background:url(styles/home/images/main_bg.png); background-size: 100% 100%;background-repeat: no-repeat;">
-
+                <div class="menuRow">
+                    <div class="menuItem" onclick="openPage('./fourPercentages/fourPercentages.html')">
+                        <div><img type="image" class="menuImg" src="./fourPercentages/images/epSearch_icon.png" /></div>
+                        <div style="color:#fff">四个百分率</div>
+                    </div>
+                    
+                    <div class="menuItem" onclick="openPage('./checkReport/checkReport.html')">
+                        <div><img type="image" class="menuImg" src="./checkReport/images/security_icon.png"  /></div>
+                        <div style="color:#fff">检查上报</div>
+                    </div>
+                    
+                    <div class="menuItem" onclick="openPage('./examRank/examRank.html')">
+                        <div><img type="image" class="menuImg" src="./examRank/images/examRank_icon.png"  /></div>
+                        <div style="color:#fff">考核排名</div>
+                    </div>
+                    
+                    <div class="menuItem" onclick="openPage('./news/news.html')">
+                        <div><img type="image" class="menuImg" src="./news/images/news_icon.png"  /></div>
+                        <div style="color:#fff">最新资讯</div>
+                    </div>
+                </div>
             </div>
         </div>
+        
         <!--尾部-->
         <div data-role="layout" data-id="layoutMain" style="background: transparent;" data-platform="android" >
             <div data-role="header" id="growFooter" >
                 <div id="growtabstrip" data-role="tabstrip" >
-                        <a data-icon="home" >首页 </a>
-                        <a data-icon="jianch-e" >检查录入 </a>
-                        <a data-icon="tongjiqy-e" >企业统计 </a>
-                        <a data-icon="arrow-e" >最新资讯</a>
+                    <a data-icon="home" >首页 </a>
+                    <a data-icon="jianch-e" >检查录入 </a>
+                    <a data-icon="tongjiqy-e" >企业统计 </a>
+                    <a data-icon="arrow-e" >最新资讯</a>
                 </div>
             </div>
         </div>
+        
     </body>
 </html>

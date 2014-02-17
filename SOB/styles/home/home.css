@@ -164,3 +164,7 @@ body, a, ul, li
 {
     content: "\e30a";
 }
+
+.menuRow {margin-top:3%;}
+.menuItem {width:25%;text-align:center;float:left}
+.menuImg {width:80%}
